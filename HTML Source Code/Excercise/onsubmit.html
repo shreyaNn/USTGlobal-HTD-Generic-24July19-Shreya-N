@@ -1,0 +1,68 @@
+/*three ways to lead form*/
+<html>
+<head><title>hi</title>
+</head>
+<body >
+<script>
+function myfromsubmit()
+{
+alert("hi");
+}
+</script>
+<form onSubmit="myfromsubmit()">
+<table>
+<h1 style="text-align:left">Registration form</h1>
+
+<tr style="text-align:left">
+<th>First name</th><th> Last name</th></tr>
+<tr>
+<td><input type="text" /></td>
+<td><input type="text" /></td>
+</tr>
+<tr></tr>
+<tr style="text-align:left">
+<th>Phone number</th><th>Email</th></tr>
+<tr>
+<td><input type="number"/></td>
+<td><input type="email"/></td>
+</tr>
+<tr></tr>
+<tr style="text-align:left">
+<th>Address</th><th>User name</th></tr>
+<tr>
+<td><input type="text"/></td>
+<td><input type="text"/></td>
+</tr>
+<tr></tr>
+<tr style="text-align:left">
+<th>Password</th><th>Gender</th></tr>
+<tr>
+<td><input type="password">
+<td>
+male<input type="radio" name="g" value="f">
+female<input type="radio" name="g" value="m">
+</td>
+</tr>
+<tr></tr>
+<tr>
+<td>
+<select>
+<option>College</option>
+<option>PA</option>
+<option>Canara</option>
+<option>Sahyadri</option>
+</select>
+</td>
+
+<th style="text-align:left">Select university</th>
+<td> Vtu<input type="checkbox" name="x[]" value="v"/>
+<td> Autonomous<input type="checkbox" name="x[]" value="a2"/>
+</tr>
+<tr>
+<td><input type="submit"/></td>
+<td><input type="submit" value="clear"/></td>
+</tr>
+</table>
+</form>
+</html>
+

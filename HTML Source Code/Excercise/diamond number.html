@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>hi
+</title>
+</head>
+<body>
+<script>
+var r,sp,p,no=7,n;
+n=no;
+var a=2;
+var value=1;
+for(r=1;r<=no;r++)//number of rows
+{
+if(r<=4){
+  for(sp=1;sp<=n;sp++)//spacing
+  {
+    document.write("&nbsp");
+	
+	}
+	n--;//5,4,3,2spaces
+	for(p=1;p<=r;p++)//displaying
+	{
+	  document.write(value);
+	      document.write("&nbsp&nbsp");//middle spaces
+
+	  value++;
+	  }
+	  document.write("<br>");//going to next line
+	}
+	else//r>4
+	{
+	n++;// 1 ,2,3,4,spacing while going to next line
+	
+	for(sp=1;sp<=n;sp++)
+  {
+    document.write("&nbsp");
+	
+	}
+	
+	for(p=1;p<=r-a;p++)//displaying  decreasing nor of elements, 5th row(5-2),(6-4),(7-6)
+	{
+	  document.write(value);
+	      document.write("&nbsp&nbsp");//middle spacing
+	  value++;
+	  }
+	  a=a+2;
+	  document.write("<br>");
+	}
+	
+	  }
+	  </script>
+	  </body>
+	  </html>
+	

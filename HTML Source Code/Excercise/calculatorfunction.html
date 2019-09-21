@@ -1,0 +1,123 @@
+<html>
+<head></head>
+<body>
+<button type="button" onclick="myfunc">history</button>
+<script>
+function cal1(){document.getElementById("t1").value += "1"
+var a=1;
+localStorage.setItem("data1",a);//large data cant be stored
+ var b=localStorage.getItem("data1");
+ document.getElementById("display").innerHTML= b;};
+ 
+ 
+ 
+ 
+function cal2(){document.getElementById("t1").value += "2"
+var c=2;
+localStorage.setItem("data2",c);//large data cant be stored
+ var d=localStorage.getItem("data2");
+ document.getElementById("display").innerHTML= d;
+};
+function cal3(){document.getElementById("t1").value += "3"
+var e=3;
+localStorage.setItem("data3",e);//large data cant be stored
+ var f=localStorage.getItem("data3");
+ document.getElementById("display").innerHTML= f;};
+function plus(){document.getElementById("t1").value += "+"};
+function cal4(){document.getElementById("t1").value += "4"
+var g=4;
+localStorage.setItem("data4",g);//large data cant be stored
+ var h=localStorage.getItem("data4");
+ document.getElementById("display").innerHTML= h;};
+function cal5(){document.getElementById("t1").value += "5"
+var h=5;
+localStorage.setItem("data5",h);//large data cant be stored
+ var i=localStorage.getItem("data5");
+ document.getElementById("display").innerHTML= i;};
+function cal6(){document.getElementById("t1").value += "6"
+var j=6;
+localStorage.setItem("data6",j);//large data cant be stored
+ var k=localStorage.getItem("data6");
+ document.getElementById("display").innerHTML= k;};
+function mins(){document.getElementById("t1").value += "-"};
+function cal7(){document.getElementById("t1").value += "7"
+var l=7;
+localStorage.setItem("data7",l);//large data cant be stored
+ var m=localStorage.getItem("data7");
+ document.getElementById("display").innerHTML= m;
+};
+function cal8(){document.getElementById("t1").value += "8"
+var n=8;
+localStorage.setItem("data8",n);//large data cant be stored
+ var o=localStorage.getItem("data8");
+ document.getElementById("display").innerHTML= o;};
+function cal9(){document.getElementById("t1").value += "9"
+var p=9;
+localStorage.setItem("data9",p);//large data cant be stored
+ var q=localStorage.getItem("data9");
+ document.getElementById("display").innerHTML= q;
+ };
+function mul(){document.getElementById("t1").value += "*"};
+function calc(){document.getElementById("t1").value = ""};
+function cal0(){document.getElementById("t1").value += "0"
+var r=0;
+localStorage.setItem("data0",r);//large data cant be stored
+ var s=localStorage.getItem("data0");
+ document.getElementById("display").innerHTML= s;};
+
+ function equal(){
+var equals = eval(document.getElementById("t1").value)
+	document.getElementById("t1").value = equals;
+	localStorage.setItem("data",equals);
+	};
+	
+	function myfunc(){
+	 var n=localStorage.getItem("data");
+	 document.getElementById("t1").value=n;};
+	 
+function div(){document.getElementById("t1").value += "/"};
+
+
+</script>
+
+
+<br/><br/><br/>
+<form name="cal">
+<div align="center">
+<h2>Simple calculator
+<br/>
+<input type="text" id="t1" name="cals" size="12">
+<table>
+ <tr>
+<td><input type="button" name="one" value="1" onclick="cal1()"></td>
+<td><input type="button" name="two" value="2" onclick="cal2()"></td>
+<td><input type="button" name="thr" value="3" onclick="cal3()"></td>
+<td><input type="button" name="plu" value="+" onclick="plus()"></td>
+</tr>
+<span id="display"></span><!used for displaying>
+<tr>
+<td><input type="button" name="fr" value="4" onclick="cal4()"></td>
+<td><input type="button" name="fiv" value="5" onclick="cal5()"></td>
+<td><input type="button" name="six" value="6" onclick="cal6()"></td>
+<td><input type="button" name="minus" value="-" onclick="mins()"></td>
+</tr>
+<span id="display"></span><!used for displaying>
+<tr>
+<td><input type="button" name="sevn" value="7" onclick="cal7()"></td>
+<td><input type="button" name="eig" value="8" onclick="cal8()"></td>
+<td><input type="button" name="nine" value="9" onclick="cal9()"></td>
+<td><input type="button" name="mull" value="*" onclick="mul()"></td>
+</tr>
+<span id="display"></span><!used for displaying>
+<tr>
+<td><input type="button" name="clear" value="c" onclick="calc()"></td>
+<td><input type="button" name="zero" value="0" onclick="cal0()"></td>
+<td><input type="button" name="equl" value="=" onclick="equal()"></td>
+<td><input type="button" name="divi" value="/"  onclick="div()"></td>
+</tr>
+</table>
+</h2>
+</div>
+</form>
+</body>
+</html>

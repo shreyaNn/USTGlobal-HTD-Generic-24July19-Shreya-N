@@ -1,0 +1,77 @@
+<html>
+<head></head>
+<body>
+
+<script>
+function number(value){
+		document.form1.result.value +=value;
+	}
+	function cle(value){
+		document.form1.result.value =value;
+	}
+	function evalua(){
+		document.form1.result.value = eval(document.form1.result.value);
+		var a=document.form1.result.value;
+		localStorage.setItem("result",a);
+		
+		}
+		function history(){
+				var b=localStorage.getItem("result");
+		document.getElementById('history').innerHTML=b;}
+		
+		function myfunc()
+		{
+		var b=localStorage.getItem("result");
+		document.getElementById("t1").value=b;
+		}
+
+
+
+</script>
+
+
+<br/><br/><br/>
+<form name="form1">
+<div align="center">
+<h2>Simple calculator
+<br/>
+<input type="text" id="t1" name="result" size="12">
+
+<table>
+
+ <tr>
+<td><input type="button" onclick="number(value)" value="1"></td>
+<td><input type="button" onclick="number(value)" value="2"></td>
+<td><input type="button" onclick="number(value)" value="3"></td>
+<td><input type="button" onclick="number(value)" value="+"></td>
+</tr>
+
+<tr>
+<td><input type="button" onclick="number(value)" value="4"></td>
+<td><input type="button" onclick="number(value)" value="5"></td>
+<td><input type="button" onclick="number(value)" value="6"></td>
+<td><input type="button" onclick="number(value)" value="-"></td>
+</tr>
+
+<tr>
+<td><input type="button" onclick="number(value)" value="7" ></td>
+<td><input type="button" onclick="number(value)" value="8"></td>
+<td><input type="button" onclick="number(value)" value="9"></td>
+<td><input type="button" onclick="number(value)" value="*"></td>
+</tr>
+
+<tr>
+<td><input type="button" onclick="cle(value)" value="C"></td>
+<td><input type="button"  onclick="number(value)"value="0"></td>
+<td><input type="button"  onclick="evalua()"value="="></td>
+<td><input type="button"  onclick="number(value)"  value="/"></td>
+</tr>
+
+
+</table>
+<input type = "button" id="history" value="History" onclick="myfunc()" size="50%" onclick="history()" >
+</h2>
+</div>
+</form>
+</body>
+</html>
